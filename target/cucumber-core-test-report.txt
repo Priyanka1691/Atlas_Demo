@@ -3,63 +3,71 @@ Feature: Qtrac login functionality
 
   @demo @Dev
   Scenario: Verification of login functionality       [90m# src/test/resources/features/Qtrac.feature:6[0m
-    [32mGiven [0m[32mOpen the browser and launch the application[0m [90m# QtracStepdef.LoginPage()[0m
-    [32mWhen [0m[32mEnter Username and Password[0m                  [90m# QtracStepdef.enterdetails()[0m
-    [32mThen [0m[32mclick on login[0m                               [90m# QtracStepdef.ClickOnLoginBtn()[0m
-    [31mThen [0m[31mclick on speedometer dashboard[0m               [90m# QtracStepdef.clickonspeedometerdashboard()[0m
-      [31morg.openqa.selenium.NoSuchElementException: Unable to detect element: menubtn (By.xpath: //*[@text='menu'])
-      	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1391)
-      	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1345)
-      	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:493)
-      	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:481)
-      	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:472)
-      	at com.qaprosoft.carina.demo.mobile.gui.pages.android.QtracHomePage.clickSpeedometerDashbord(QtracHomePage.java:30)
-      	at com.qaprosoft.carina.demo.cucumber.steps.QtracStepdef.clickonspeedometerdashboard(QtracStepdef.java:46)
-      	at ✽.Then click on speedometer dashboard(src/test/resources/features/Qtrac.feature:10)
-      Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-      Command duration or timeout: 0 milliseconds
-      For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+    [31mGiven [0m[31mOpen the browser and launch the application[0m [90m# QtracStepdef.LoginPage()[0m
+      [31morg.openqa.selenium.WebDriverException: org.openqa.selenium.SessionNotCreatedException: com.ssts.pcloudy.exceptions.DeviceNotBookedException : Requested Device Full 'Samsung_GalaxyJ4Plus_Android_8.1.0'name not found/already booked. (WARNING: The server did not provide any stacktrace information)
+      Command duration or timeout: 405 milliseconds
       Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-      System info: host: 'QKNBK474', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
-      Driver info: io.appium.java_client.android.AndroidDriver
-      Capabilities {app: /home/radmin/build/raid-dat..., appActivity: com.qk.q_trac.MainActivity, appPackage: com.qk.q_trac, autoGrantPermissions: true, automationName: uiautomator2, databaseEnabled: false, desired: {app: /home/radmin/build/raid-dat..., appActivity: com.qk.q_trac.MainActivity, appPackage: com.qk.q_trac, autoGrantPermissions: true, automationName: uiautomator2, deviceName: 48, deviceType: phone, noSign: true, pCloudy_ApiKey: jfx5ppmbyng7x8mv2z9hvzqz, pCloudy_ApplicationName: Qtrac.apk, pCloudy_DeviceFullName: Samsung_GalaxyJ4Plus_Androi..., pCloudy_DurationInMinutes: 60, pCloudy_Username: nikita.shinde@qualitykiosk.com, platformName: ANDROID, udid: 879ee013}, deviceApiLevel: 27, deviceManufacturer: samsung, deviceModel: SM-J415F, deviceName: 879ee013, deviceScreenDensity: 280, deviceScreenSize: 720x1480, deviceType: phone, deviceUDID: 879ee013, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noSign: true, pCloudy_ApiKey: jfx5ppmbyng7x8mv2z9hvzqz, pCloudy_ApplicationName: Qtrac.apk, pCloudy_DeviceFullName: Samsung_GalaxyJ4Plus_Androi..., pCloudy_DurationInMinutes: 60, pCloudy_Username: nikita.shinde@qualitykiosk.com, pixelRatio: 1.75, platform: LINUX, platformName: ANDROID, platformVersion: 8.1.0, statBarHeight: 42, takesScreenshot: true, udid: 879ee013, viewportRect: {height: 1354, left: 0, top: 42, width: 720}, warnings: {}, webStorageEnabled: false}
-      Session ID: 51f5e27c-4bd0-43e4-8947-6a215fb3ea6e
-      *** Element info: {Using=xpath, value=//*[@text='menu']}
-      	at sun.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+      System info: host: 'T440P', ip: '192.168.216.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+      Driver info: driver.version: AndroidDriver
+      	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:169)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+      	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+      	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+      	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+      	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+      	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:323)
+      	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+      	at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:37)
+      	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:86)
+      	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:84)
+      	at com.qaprosoft.carina.core.foundation.webdriver.core.factory.impl.MobileFactory.create(MobileFactory.java:167)
+      	at com.qaprosoft.carina.core.foundation.webdriver.core.factory.DriverFactory.create(DriverFactory.java:71)
+      	at com.qaprosoft.carina.core.foundation.webdriver.IDriverPool.createDriver(IDriverPool.java:353)
+      	at com.qaprosoft.carina.core.foundation.webdriver.IDriverPool.getDriver(IDriverPool.java:143)
+      	at com.qaprosoft.carina.demo.cucumber.steps.QtracStepdef.LoginPage(QtracStepdef.java:28)
+      	at ✽.Given Open the browser and launch the application(src/test/resources/features/Qtrac.feature:7)
+      Caused by: org.openqa.selenium.SessionNotCreatedException: com.ssts.pcloudy.exceptions.DeviceNotBookedException : Requested Device Full 'Samsung_GalaxyJ4Plus_Android_8.1.0'name not found/already booked. (WARNING: The server did not provide any stacktrace information)
+      Command duration or timeout: 405 milliseconds
+      Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+      System info: host: 'T440P', ip: '192.168.216.41', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+      Driver info: driver.version: AndroidDriver
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
       	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
       	at java.lang.reflect.Constructor.newInstance(Unknown Source)
       	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
       	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-      	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-      	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-      	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-      	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+      	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
+      	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+      	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+      	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+      	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+      	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+      	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+      	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+      	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+      	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+      	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+      	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+      	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+      	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+      	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
       	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:150)
       	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
       	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
       	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
       	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-      	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-      	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-      	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-      	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-      	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
-      	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-      	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-      	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-      	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-      	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-      	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-      	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.refindElement(ExtendedWebElement.java:383)
-      	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1388)
-      	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1345)
-      	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:493)
-      	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:481)
-      	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:472)
-      	at com.qaprosoft.carina.demo.mobile.gui.pages.android.QtracHomePage.clickSpeedometerDashbord(QtracHomePage.java:30)
-      	at com.qaprosoft.carina.demo.cucumber.steps.QtracStepdef.clickonspeedometerdashboard(QtracStepdef.java:46)
+      	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+      	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:323)
+      	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+      	at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:37)
+      	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:86)
+      	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:84)
+      	at com.qaprosoft.carina.core.foundation.webdriver.core.factory.impl.MobileFactory.create(MobileFactory.java:167)
+      	at com.qaprosoft.carina.core.foundation.webdriver.core.factory.DriverFactory.create(DriverFactory.java:71)
+      	at com.qaprosoft.carina.core.foundation.webdriver.IDriverPool.createDriver(IDriverPool.java:353)
+      	at com.qaprosoft.carina.core.foundation.webdriver.IDriverPool.getDriver(IDriverPool.java:143)
+      	at com.qaprosoft.carina.demo.cucumber.steps.QtracStepdef.LoginPage(QtracStepdef.java:28)
       	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
       	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
       	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -98,8 +106,11 @@ Feature: Qtrac login functionality
       	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
       	at org.testng.TestNG.runSuites(TestNG.java:1049)
       	at org.testng.TestNG.run(TestNG.java:1017)
-      	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+      	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
       	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
       	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
       [0m
+    [36mWhen [0m[36mEnter Username and Password[0m                  [90m# QtracStepdef.enterdetails()[0m
+    [36mThen [0m[36mclick on login[0m                               [90m# QtracStepdef.ClickOnLoginBtn()[0m
+    [36mThen [0m[36mclick on speedometer dashboard[0m               [90m# QtracStepdef.clickonspeedometerdashboard()[0m
     [36mAnd [0m[36mclick on Pagebucket dashboard[0m                 [90m# QtracStepdef.clickonPagebucketdashboard()[0m
