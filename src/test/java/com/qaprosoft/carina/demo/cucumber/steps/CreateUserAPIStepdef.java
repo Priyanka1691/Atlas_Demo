@@ -20,29 +20,29 @@ import cucumber.api.java.en.When;
 
 public class CreateUserAPIStepdef extends CucumberRunner {
 
-	PostUserCreationMethod user = null;
-	Response rs = null;
+PostUserCreationMethod user = null;
+Response rs = null;
 
-	@Given("^Post endpoint given$")
-	public void startMethod() throws Exception {
-		user = new PostUserCreationMethod();
-	}
+@Given("^Post endpoint given$")
+public void startMethod() throws Exception {
+user = new PostUserCreationMethod();
+}
 
-	@When("^Enter Username and Job$")
-	public void enterdetails() {
-		user.addParameter("name", "sample");
-		user.addParameter("job", "test");
-	}
+@When("^Enter Username and Job$")
+public void enterdetails() {
+user.addParameter("name", "sample");
+user.addParameter("job", "test");
+}
 
-	@Then("^Post the api$")
-	public void postAPI() {
-		rs = user.callAPI();
-	}
+@Then("^Post the api$")
+public void postAPI() {
+rs = user.callAPI();
+}
 
-	@And("^Get response$")
-	public void getResponseTime() {
-		long rsTime = rs.timeIn(TimeUnit.MILLISECONDS);
-		System.out.println("Response time: " + rsTime);
-	}
+@And("^Get response$")
+public void getResponseTime() {
+long rsTime = rs.timeIn(TimeUnit.MILLISECONDS);
+System.out.println("Response time: " + rsTime);
+}
 
 }

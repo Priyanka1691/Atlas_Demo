@@ -10,6 +10,8 @@
 	<name>Atlas_Demo</name>
 	<url>http://www.qaprosoft.com/</url>
 
+             
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<carina-core_version>RELEASE</carina-core_version>
